@@ -8,7 +8,7 @@
 #include <type_traits>
 
 #if defined(__FINITE_MATH_ONLY__) && __FINITE_MATH_ONLY__
-#error "pastar must not be compiled with -fast-math or -finite-math-only"
+#error "pastar must not be compiled with -ffast-math or -ffinite-math-only"
 #endif
 
 namespace pastar {
