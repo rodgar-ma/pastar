@@ -30,7 +30,7 @@ target_include_directories(pastar PUBLIC
     $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
 )
 target_compile_features(pastar PUBLIC cxx_std_20)
-target_link_libraries(pastar PRIVATE pastar_warning)
+target_link_libraries(pastar PRIVATE pastar_warnings)
 if(PASTAR_DEBUG)
   target_compile_definitions(pastar PUBLIC PASTAR_DEBUG)
 endif()
