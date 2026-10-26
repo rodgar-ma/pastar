@@ -24,7 +24,7 @@ inline constexpr Weight kInfinity = std::numeric_limits<Weight>::infinity();
 static_assert(std::numeric_limits<Weight>::is_iec559, "Weights type must be IEC559 compliant.");
 static_assert(std::numeric_limits<Weight>::has_infinity, "Weights type must be has infinity.");
 
-inline constexpr double kDefaultTol = 1e-5;
+inline constexpr double kDefaultTol = 1e-5; // Provisional
 
 struct Edge {
   NodeId to;
