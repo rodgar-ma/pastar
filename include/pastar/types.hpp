@@ -26,11 +26,11 @@ using Weight = float;
 inline constexpr Weight kInfinity = std::numeric_limits<Weight>::infinity();
 
 static_assert(std::numeric_limits<Weight>::is_iec559, "Weights type must be IEC559 compliant.");
-static_assert(std::numeric_limits<Weight>::has_infinity, "Weights type must has infinity.");
+static_assert(std::numeric_limits<Weight>::has_infinity, "Weights type must have an infinity.");
 
 // Default relative tolerance for comparing path costs.
 // Provisional: to be fixed from measured float error in milestone M5 (decision A7).
-inline constexpr double kDefaultTol = 1e-5; // Provisional
+inline constexpr double kDefaultTol = 1e-5;
 
 struct Edge {
   NodeId to;
