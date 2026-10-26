@@ -9,8 +9,8 @@ FetchContent_Declare(Catch2
 FetchContent_MakeAvailable(Catch2)
 
 add_executable(pastar_tests
-    test_smoke.cpp
     test_types.cpp
+    test_graph.cpp
 )
 target_link_libraries(pastar_tests PRIVATE
     pastar::pastar

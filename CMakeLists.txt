@@ -22,14 +22,16 @@ target_compile_options(pastar_warnings INTERFACE
 )
 
 # Library
-add_library(pastar INTERFACE)
+add_library(pastar STATIC
+  src/graph.cpp
+)
 add_library(pastar::pastar ALIAS pastar)
-target_include_directories(pastar INTERFACE
+target_include_directories(pastar PUBLIC
     $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
 )
-target_compile_features(pastar INTERFACE cxx_std_20)
+target_compile_features(pastar PUBLIC cxx_std_20)
 if(PASTAR_DEBUG)
-  target_compile_definitions(pastar INTERFACE PASTAR_DEBUG)
+  target_compile_definitions(pastar PUBLIC PASTAR_DEBUG)
 endif()
 
 # Tests
