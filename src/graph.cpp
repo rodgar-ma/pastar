@@ -13,7 +13,7 @@ namespace pastar {
 Graph build_graph(NodeId num_nodes, std::span<const EdgeInput> input) {
   if (input.size() > std::numeric_limits<EdgeId>::max()) {
     throw std::invalid_argument("build_graph: " + std::to_string(input.size()) +
-                                " edges do not fir in EdgeId");
+                                " edges do not fit in EdgeId");
   }
 
   const std::size_t n = num_nodes;
